@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.server.processors;
+package com.github.kfcfans.oms.samples.processors;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;

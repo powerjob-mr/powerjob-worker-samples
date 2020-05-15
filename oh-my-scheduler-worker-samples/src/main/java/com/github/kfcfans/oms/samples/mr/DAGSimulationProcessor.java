@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.server.mr;
+package com.github.kfcfans.oms.samples.mr;
 
 import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
 import com.github.kfcfans.oms.worker.core.processor.TaskContext;

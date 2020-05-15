@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.server.tester;
+package com.github.kfcfans.oms.samples.tester;
 
 import com.alibaba.fastjson.JSONObject;
 import com.github.kfcfans.oms.worker.core.processor.ProcessResult;

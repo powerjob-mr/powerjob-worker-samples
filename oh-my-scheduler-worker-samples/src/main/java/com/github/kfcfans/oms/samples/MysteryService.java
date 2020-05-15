@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.server;
+package com.github.kfcfans.oms.samples;
 
 import org.springframework.stereotype.Service;
 

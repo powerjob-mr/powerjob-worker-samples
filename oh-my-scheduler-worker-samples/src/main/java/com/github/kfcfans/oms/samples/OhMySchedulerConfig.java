@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.server;
+package com.github.kfcfans.oms.samples;
 
 import com.github.kfcfans.oms.worker.OhMyWorker;
 import com.github.kfcfans.oms.worker.common.OhMyConfig;
