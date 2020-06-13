@@ -1,13 +1,13 @@
-package com.github.kfcfans.oms.samples.processors;
+package com.github.kfcfans.powerjob.samples.processors;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.github.kfcfans.oms.common.utils.JsonUtils;
-import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
-import com.github.kfcfans.oms.worker.core.processor.TaskContext;
-import com.github.kfcfans.oms.worker.core.processor.TaskResult;
-import com.github.kfcfans.oms.worker.core.processor.sdk.MapReduceProcessor;
-import com.github.kfcfans.oms.worker.log.OmsLogger;
+import com.github.kfcfans.powerjob.common.utils.JsonUtils;
+import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
+import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapReduceProcessor;
+import com.github.kfcfans.powerjob.worker.log.OmsLogger;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

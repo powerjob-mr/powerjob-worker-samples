@@ -1,9 +1,9 @@
-package com.github.kfcfans.oms.samples.mr;
+package com.github.kfcfans.powerjob.samples.mr;
 
-import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
-import com.github.kfcfans.oms.worker.core.processor.TaskContext;
-import com.github.kfcfans.oms.worker.core.processor.TaskResult;
-import com.github.kfcfans.oms.worker.core.processor.sdk.MapReduceProcessor;
+import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
+import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapReduceProcessor;
 import com.google.common.collect.Lists;
 
 import java.util.List;
