@@ -1,10 +1,10 @@
-package com.github.kfcfans.oms.samples.mr;
+package com.github.kfcfans.powerjob.samples.mr;
 
-import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
-import com.github.kfcfans.oms.worker.core.processor.TaskContext;
-import com.github.kfcfans.oms.worker.core.processor.TaskResult;
-import com.github.kfcfans.oms.worker.core.processor.sdk.MapReduceProcessor;
-import com.github.kfcfans.oms.worker.log.OmsLogger;
+import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
+import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapReduceProcessor;
+import com.github.kfcfans.powerjob.worker.log.OmsLogger;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;

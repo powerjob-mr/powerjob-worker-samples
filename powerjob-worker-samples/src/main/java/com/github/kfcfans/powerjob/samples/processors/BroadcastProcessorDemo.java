@@ -1,10 +1,10 @@
-package com.github.kfcfans.oms.samples.processors;
+package com.github.kfcfans.powerjob.samples.processors;
 
-import com.github.kfcfans.oms.common.utils.NetUtils;
-import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
-import com.github.kfcfans.oms.worker.core.processor.TaskContext;
-import com.github.kfcfans.oms.worker.core.processor.TaskResult;
-import com.github.kfcfans.oms.worker.core.processor.sdk.BroadcastProcessor;
+import com.github.kfcfans.powerjob.common.utils.NetUtils;
+import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
+import com.github.kfcfans.powerjob.worker.core.processor.sdk.BroadcastProcessor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

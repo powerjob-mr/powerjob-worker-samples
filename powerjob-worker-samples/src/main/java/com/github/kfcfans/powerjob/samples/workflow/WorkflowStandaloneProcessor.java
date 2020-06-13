@@ -1,10 +1,10 @@
-package com.github.kfcfans.oms.samples.workflow;
+package com.github.kfcfans.powerjob.samples.workflow;
 
 import com.alibaba.fastjson.JSONObject;
-import com.github.kfcfans.oms.worker.core.processor.ProcessResult;
-import com.github.kfcfans.oms.worker.core.processor.TaskContext;
-import com.github.kfcfans.oms.worker.core.processor.sdk.BasicProcessor;
-import com.github.kfcfans.oms.worker.log.OmsLogger;
+import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
+import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
+import com.github.kfcfans.powerjob.worker.core.processor.sdk.BasicProcessor;
+import com.github.kfcfans.powerjob.worker.log.OmsLogger;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;

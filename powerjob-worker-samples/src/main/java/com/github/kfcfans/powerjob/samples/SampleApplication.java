@@ -1,4 +1,4 @@
-package com.github.kfcfans.oms.samples;
+package com.github.kfcfans.powerjob.samples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-package com.github.kfcfans.oms.samples;
+package com.github.kfcfans.powerjob.samples;
 
-import com.github.kfcfans.oms.worker.OhMyWorker;
-import com.github.kfcfans.oms.worker.common.OhMyConfig;
-import com.github.kfcfans.oms.worker.common.constants.StoreStrategy;
+import com.github.kfcfans.powerjob.worker.OhMyWorker;
+import com.github.kfcfans.powerjob.worker.common.OhMyConfig;
+import com.github.kfcfans.powerjob.worker.common.constants.StoreStrategy;
 import com.google.common.collect.Lists;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
