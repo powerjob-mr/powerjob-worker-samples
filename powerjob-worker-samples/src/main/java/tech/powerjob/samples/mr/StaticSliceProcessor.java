@@ -1,10 +1,10 @@
-package com.github.kfcfans.powerjob.samples.mr;
+package tech.powerjob.samples.mr;
 
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapReduceProcessor;
-import com.github.kfcfans.powerjob.worker.log.OmsLogger;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.TaskResult;
+import tech.powerjob.worker.core.processor.sdk.MapReduceProcessor;
+import tech.powerjob.worker.log.OmsLogger;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;

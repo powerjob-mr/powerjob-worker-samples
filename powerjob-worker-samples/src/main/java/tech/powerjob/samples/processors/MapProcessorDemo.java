@@ -1,10 +1,10 @@
-package com.github.kfcfans.powerjob.samples.processors;
+package tech.powerjob.samples.processors;
 
-import com.github.kfcfans.powerjob.common.utils.JsonUtils;
-import com.github.kfcfans.powerjob.samples.MysteryService;
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapProcessor;
+import tech.powerjob.common.utils.JsonUtils;
+import tech.powerjob.samples.MysteryService;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.sdk.MapProcessor;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

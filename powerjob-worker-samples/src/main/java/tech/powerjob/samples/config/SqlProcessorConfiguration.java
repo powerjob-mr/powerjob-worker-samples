@@ -1,6 +1,6 @@
-package com.github.kfcfans.powerjob.samples.config;
+package tech.powerjob.samples.config;
 
-import com.github.kfcfans.powerjob.common.utils.CommonUtils;
+import tech.powerjob.common.utils.CommonUtils;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.h2.Driver;
