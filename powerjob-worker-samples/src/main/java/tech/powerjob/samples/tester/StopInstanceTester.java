@@ -1,8 +1,8 @@
-package com.github.kfcfans.powerjob.samples.tester;
+package tech.powerjob.samples.tester;
 
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.BasicProcessor;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.sdk.BasicProcessor;
 import org.springframework.stereotype.Component;
 
 /**

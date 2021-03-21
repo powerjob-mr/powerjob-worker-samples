@@ -1,10 +1,10 @@
-package com.github.kfcfans.powerjob.samples.mr;
+package tech.powerjob.samples.mr;
 
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.MapReduceProcessor;
-import com.github.kfcfans.powerjob.worker.log.OmsLogger;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.TaskResult;
+import tech.powerjob.worker.core.processor.sdk.MapReduceProcessor;
+import tech.powerjob.worker.log.OmsLogger;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
@@ -23,7 +23,7 @@ import java.util.Map;
  * @since 2020/5/21
  */
 @Component
-public class StaticSliceProcessor extends MapReduceProcessor {
+public class StaticSliceProcessor implements MapReduceProcessor {
 
     @Override
     public ProcessResult process(TaskContext context) throws Exception {
@@ -31,13 +31,14 @@ public class StaticSliceProcessor extends MapReduceProcessor {
 
         // root task 负责分发任务
         if (isRootTask()) {
-            // 从控制台传递分片参数，架设格式为KV：1=a&2=b&3=c
+            // 从控制台传递分片参数，假设格式为KV：1=a&2=b&3=c
             String jobParams = context.getJobParams();
             Map<String, String> paramsMap = Splitter.on("&").withKeyValueSeparator("=").split(jobParams);
 
             List<SubTask> subTasks = Lists.newLinkedList();
             paramsMap.forEach((k, v) -> subTasks.add(new SubTask(Integer.parseInt(k), v)));
-            return map(subTasks, "SLICE_TASK");
+            map(subTasks, "SLICE_TASK");
+            return new ProcessResult(true, "map successfully");
         }
 
         Object subTask = context.getSubTask();

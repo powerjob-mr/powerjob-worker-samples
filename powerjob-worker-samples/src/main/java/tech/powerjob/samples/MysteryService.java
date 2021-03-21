@@ -1,4 +1,4 @@
-package com.github.kfcfans.powerjob.samples;
+package tech.powerjob.samples;
 
 import org.springframework.stereotype.Service;
 

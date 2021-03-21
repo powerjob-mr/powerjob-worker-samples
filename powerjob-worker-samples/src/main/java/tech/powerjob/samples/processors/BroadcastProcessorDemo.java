@@ -1,11 +1,11 @@
-package com.github.kfcfans.powerjob.samples.processors;
+package tech.powerjob.samples.processors;
 
-import com.github.kfcfans.powerjob.common.utils.NetUtils;
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskResult;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.BroadcastProcessor;
-import com.github.kfcfans.powerjob.worker.log.OmsLogger;
+import tech.powerjob.common.utils.NetUtils;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.TaskResult;
+import tech.powerjob.worker.core.processor.sdk.BroadcastProcessor;
+import tech.powerjob.worker.log.OmsLogger;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Slf4j
 @Component
-public class BroadcastProcessorDemo extends BroadcastProcessor {
+public class BroadcastProcessorDemo implements BroadcastProcessor {
 
     @Override
     public ProcessResult preProcess(TaskContext context) throws Exception {

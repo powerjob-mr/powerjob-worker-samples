@@ -1,9 +1,9 @@
-package com.github.kfcfans.powerjob.samples.processors;
+package tech.powerjob.samples.processors;
 
-import com.github.kfcfans.powerjob.worker.core.processor.ProcessResult;
-import com.github.kfcfans.powerjob.worker.core.processor.TaskContext;
-import com.github.kfcfans.powerjob.worker.core.processor.sdk.BasicProcessor;
-import com.github.kfcfans.powerjob.worker.log.OmsLogger;
+import tech.powerjob.worker.core.processor.ProcessResult;
+import tech.powerjob.worker.core.processor.TaskContext;
+import tech.powerjob.worker.core.processor.sdk.BasicProcessor;
+import tech.powerjob.worker.log.OmsLogger;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,6 @@ import java.util.Collections;
 
 /**
  * 单机处理器 示例
- * com.github.kfcfans.powerjob.samples.processors.StandaloneProcessorDemo
  *
  * @author tjq
  * @since 2020/4/17
