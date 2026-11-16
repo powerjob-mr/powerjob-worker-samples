@@ -1,0 +1,61 @@
+{
+  "command": "mvn -B clean verify",
+  "java": "Eclipse Temurin 1.8.0_452-b09",
+  "maven": "3.9.9",
+  "passed": true,
+  "upstream_commit": "d92ad66277ca54e14e2835b2e5a6aaf01f620684",
+  "sibling_checkouts": {
+    "powerjob-common": "f2c304d2b4774e1b3248de95b2bd16e688c889af",
+    "powerjob-client": "c21ffb81ec359271a5e925f87ab9072d0a231dbf",
+    "powerjob-worker": "a3798cd0a072d544421136f479dde9ae919f42ca"
+  },
+  "modes": {
+    "sibling": {
+      "passed": true,
+      "reactor": [
+        "powerjob",
+        "powerjob-common",
+        "powerjob-remote",
+        "powerjob-remote-framework",
+        "powerjob-remote-impl-akka",
+        "powerjob-remote-impl-http",
+        "powerjob-remote-impl-mu",
+        "powerjob-worker",
+        "powerjob-worker-spring-boot-starter",
+        "powerjob-official-processors",
+        "powerjob-client",
+        "powerjob-worker-samples",
+        "powerjob-client-build",
+        "powerjob-worker-build",
+        "powerjob-worker-samples-build"
+      ],
+      "tests": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "tests_by_module": {}
+    },
+    "standalone": {
+      "passed": true,
+      "reactor": [
+        "powerjob-worker-samples",
+        "powerjob-worker-samples-build"
+      ],
+      "tests": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "tests_by_module": {}
+    }
+  },
+  "monorepo_baseline_tests_by_module": {},
+  "excluded_tests": 0,
+  "artifacts": [
+    "powerjob-worker-samples/target/powerjob-worker-samples-5.1.7.jar"
+  ],
+  "scope": "This repository's modules and tests. sibling: built with the sibling library checkouts in the reactor; standalone: built alone against the published 5.1.7 artifacts. Excluded upstream tests are listed in split.json."
+}
