@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Builds this repository's modules. The PowerJob libraries it uses come
+         from sibling checkouts when present (see the profiles below), and
+         otherwise from the published 5.1.7 artifacts. -->
+    <groupId>tech.powerjob</groupId>
+    <artifactId>powerjob-worker-samples-build</artifactId>
+    <version>5.1.7</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>powerjob-worker-samples</module>
+    </modules>
+
+    <profiles>
+        <!-- Build powerjob-common from the sibling checkout when it is present. -->
+        <profile>
+            <id>sibling-powerjob-common</id>
+            <activation>
+                <property>
+                    <name>powerjob.build.root</name>
+                    <value>powerjob-worker-samples</value>
+                </property>
+                <file>
+                    <exists>${basedir}/../powerjob-common/pom.xml</exists>
+                </file>
+            </activation>
+            <modules>
+                <module>../powerjob-common</module>
+            </modules>
+        </profile>
+        <!-- Build powerjob-client from the sibling checkout when it is present. -->
+        <profile>
+            <id>sibling-powerjob-client</id>
+            <activation>
+                <property>
+                    <name>powerjob.build.root</name>
+                    <value>powerjob-worker-samples</value>
+                </property>
+                <file>
+                    <exists>${basedir}/../powerjob-client/pom.xml</exists>
+                </file>
+            </activation>
+            <modules>
+                <module>../powerjob-client</module>
+            </modules>
+        </profile>
+        <!-- Build powerjob-worker from the sibling checkout when it is present. -->
+        <profile>
+            <id>sibling-powerjob-worker</id>
+            <activation>
+                <property>
+                    <name>powerjob.build.root</name>
+                    <value>powerjob-worker-samples</value>
+                </property>
+                <file>
+                    <exists>${basedir}/../powerjob-worker/pom.xml</exists>
+                </file>
+            </activation>
+            <modules>
+                <module>../powerjob-worker</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>

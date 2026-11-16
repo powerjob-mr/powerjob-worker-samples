@@ -1,73 +1,48 @@
-# English | [简体中文](./README_zhCN.md)
+# powerjob-worker-samples
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/KFCFans/PowerJob/master/others/images/logo.png" alt="PowerJob" title="PowerJob" width="557"/>
-</p>
+Sample worker application (Spring Boot) and its Docker image.
 
-<p align="center">
-<a href="https://github.com/PowerJob/PowerJob/actions"><img src="https://github.com/PowerJob/PowerJob/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master" alt="actions"></a>
-<a href="https://central.sonatype.com/search?smo=true&q=powerjob-worker&namespace=tech.powerjob"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/tech.powerjob/powerjob-worker"></a>
-<a href="https://github.com/PowerJob/PowerJob/releases"><img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/kfcfans/powerjob?color=%23E59866"></a>
-<a href="https://github.com/PowerJob/PowerJob/blob/master/LICENSE"><img src="https://img.shields.io/github/license/KFCFans/PowerJob" alt="LICENSE"></a>
-</p>
+Split from [PowerJob](https://github.com/PowerJob/PowerJob) at upstream commit
+`d92ad66277ca54e14e2835b2e5a6aaf01f620684` (release 5.1.7). The Git history of retained files is preserved,
+including earlier names of the modules; filtering rewrites commit IDs.
 
-[PowerJob](https://github.com/PowerJob/PowerJob) is an open-source distributed computing and job scheduling framework which allows developers to easily schedule tasks in their own application.
+## Build
 
-Refer to [PowerJob Introduction](https://www.yuque.com/powerjob/en/introduce) for detailed information.
+Install JDK 8 and Maven 3.9, then run from this repository:
 
-# Introduction
+```bash
+mvn -B clean verify
+```
 
-### Features
-- **Friendly UI:** [Front-end](http://try.powerjob.tech/#/welcome?appName=powerjob-agent-test&password=123) page is provided and developers can manage their task, monitor the status, check the logs online, etc.
+This repository uses the PowerJob libraries from `powerjob-common`, `powerjob-client`, `powerjob-worker`.
+Check them out next to this repository:
 
-- **Abundant Timing Strategies:** Four timing strategies are supported, including CRON expression, fixed rate, fixed delay and OpenAPI which allows you to define your own scheduling policies, such as delaying execution.
+```text
+workspace/
+  powerjob-client/
+  powerjob-common/
+  powerjob-worker/
+  powerjob-worker-samples/
+```
 
-- **Multiple Execution Mode:** Four execution modes are supported, including stand-alone, broadcast, Map and MapReduce. Distributed computing resource could be utilized in MapReduce mode, try the magic out [here](https://www.yuque.com/powerjob/en/za1d96#9YOnV)!
+The root `pom.xml` adds each sibling checkout to the Maven reactor, so their
+sources are compiled in the same build and changes there are visible here
+without installing anything. The parent POM `tech.powerjob:powerjob` comes from
+`../powerjob-common`. A sibling that is not checked out is replaced by its
+published `5.1.7` artifact from Maven Central.
 
-- **Workflow(DAG) Support:** Both job dependency management and data communications between jobs are supported.
+JDK 8 is the version upstream targets and the version verified locally.
+See [build-verification.json](build-verification.json) for the local build results.
 
-- **Extensive Processor Support:** Developers can write their processors in Java, Shell, Python, and will subsequently support multilingual scheduling via HTTP.
+## Included modules
 
-- **Powerful Disaster Tolerance:** As long as there are enough computing nodes, configurable retry policies make it possible for your task to be executed and finished successfully.
+- `powerjob-worker-samples/`
 
-- **High Availability & High Performance:**  PowerJob supports unlimited horizontal expansion. It's easy to achieve high availability and performance by deploying as many PowerJob server and worker nodes.
+## Origin
 
-### Applicable scenes
+See [UPSTREAM-README.md](UPSTREAM-README.md) for the original project overview
+and [split.json](split.json) for the split manifest.
 
-- Timed tasks, for example, allocating e-coupons on 9 AM every morning.
-- Broadcast tasks, for example, broadcasting to the cluster to clear logs.
-- MapReduce tasks, for example, speeding up certain job like updating large amounts of data.
-- Delayed tasks, for example, processing overdue orders.
-- Customized tasks, triggered with [OpenAPI](https://www.yuque.com/powerjob/en/openapi).
+## License
 
-### Online trial
-- Address: [try.powerjob.tech](http://try.powerjob.tech/#/welcome?appName=powerjob-agent-test&password=123)
-- Recommend reading the documentation first: [here](https://www.yuque.com/powerjob/en/trial)
-
-# Documents
-**[Docs](https://www.yuque.com/powerjob/en/introduce)**
-
-**[中文文档](https://www.yuque.com/powerjob/guidence/intro)**
-
-# Known Users
-[Click to register as PowerJob user!](https://github.com/PowerJob/PowerJob/issues/6)  
-ღ( ´・ᴗ・\` )ღ Many thanks to the following registered users. ღ( ´・ᴗ・\` )ღ
-<p style="text-align: center">
-<img src="https://raw.githubusercontent.com/KFCFans/PowerJob/master/others/images/user.png" alt="PowerJob User" title="PowerJob User"/>
-</p>
-
-# Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/PowerJob/PowerJob.svg)](https://starchart.cc/PowerJob/PowerJob)
-
-# License
-
-PowerJob is released under Apache License 2.0. Please refer to [License](./LICENSE) for details.
-
-# Others
-
-- Any developer interested in getting more involved in PowerJob may join our [Reddit](https://www.reddit.com/r/PowerJob) or [Gitter](https://gitter.im/PowerJob/community) community and make [contributions](https://github.com/PowerJob/PowerJob/pulls)!
-
-- Reach out to me through email **tengjiqi@gmail.com**. Any issues or questions are welcomed on [Issues](https://github.com/PowerJob/PowerJob/issues).
-
-- Look forward to your opinions. Response may be late but not denied.
+Apache License 2.0; see [LICENSE](LICENSE).

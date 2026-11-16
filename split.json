@@ -1,0 +1,56 @@
+{
+  "upstream": "https://github.com/PowerJob/PowerJob",
+  "upstream_branch": "master",
+  "upstream_commit": "d92ad66277ca54e14e2835b2e5a6aaf01f620684",
+  "upstream_version": "5.1.7",
+  "repository": "powerjob-worker-samples",
+  "kind": "service",
+  "modules": [
+    "powerjob-worker-samples"
+  ],
+  "retained_paths": [
+    "LICENSE",
+    "README.md",
+    "README_zhCN.md",
+    "SECURITY.md",
+    ".gitignore",
+    "others/images/",
+    "powerjob-worker-samples/"
+  ],
+  "historical_paths": [
+    "README_enUS.md",
+    "oh-my-scheduler-worker-samples/"
+  ],
+  "dependencies": {
+    "powerjob-common": {
+      "artifacts": [
+        "tech.powerjob:powerjob (parent POM)",
+        "tech.powerjob:powerjob-common",
+        "tech.powerjob:powerjob-remote-framework",
+        "tech.powerjob:powerjob-remote-impl-akka",
+        "tech.powerjob:powerjob-remote-impl-http",
+        "tech.powerjob:powerjob-remote-impl-mu"
+      ],
+      "default_path": "../powerjob-common"
+    },
+    "powerjob-client": {
+      "artifacts": [
+        "tech.powerjob:powerjob-client"
+      ],
+      "default_path": "../powerjob-client"
+    },
+    "powerjob-worker": {
+      "artifacts": [
+        "tech.powerjob:powerjob-worker",
+        "tech.powerjob:powerjob-worker-spring-boot-starter",
+        "tech.powerjob:powerjob-official-processors"
+      ],
+      "default_path": "../powerjob-worker"
+    }
+  },
+  "excluded_tests": [],
+  "test_jvm_options": [],
+  "verified_java": 8,
+  "build_command": "mvn -B clean verify",
+  "filter_tool": "git-filter-repo a40bce548d2c"
+}

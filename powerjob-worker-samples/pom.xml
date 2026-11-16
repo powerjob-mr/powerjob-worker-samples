@@ -6,6 +6,7 @@
         <artifactId>powerjob</artifactId>
         <groupId>tech.powerjob</groupId>
         <version>5.1.7</version>
+        <relativePath>../../powerjob-common/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

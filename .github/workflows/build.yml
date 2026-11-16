@@ -1,0 +1,39 @@
+name: Build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: powerjob-worker-samples
+      # Sibling library repositories used by the build. POWERJOB_READ_TOKEN needs
+      # read access to them if they are private.
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/powerjob-common
+          path: powerjob-common
+          token: ${{ secrets.POWERJOB_READ_TOKEN || github.token }}
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/powerjob-client
+          path: powerjob-client
+          token: ${{ secrets.POWERJOB_READ_TOKEN || github.token }}
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/powerjob-worker
+          path: powerjob-worker
+          token: ${{ secrets.POWERJOB_READ_TOKEN || github.token }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: maven
+      - name: Build and test
+        working-directory: powerjob-worker-samples
+        run: mvn -B clean verify
